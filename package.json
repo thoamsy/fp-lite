@@ -16,5 +16,9 @@
     "eslint-plugin-import": "^2.14.0",
     "jest": "^23.5.0",
     "prettier": "^1.14.2"
+  },
+  "scripts": {
+    "prettier": "prettier --config ./.prettierrc --write \"{src,test}/**/*.js\"",
+    "precommit": "yarn run prettier"
   }
 }
