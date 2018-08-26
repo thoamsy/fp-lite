@@ -5,7 +5,7 @@ function prop(path, object) {
   if (Array.isArray(path)) {
     return reduce((val, key) => val[key] || {}, object, path);
   }
-  return value[key];
+  return object[path];
 }
 
 export default curry(prop);

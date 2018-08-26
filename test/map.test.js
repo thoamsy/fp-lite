@@ -17,8 +17,8 @@ describe('the function should be same like the Array.prototype.map', () => {
       { name: 'b', age: 20 },
       { name: 'c', age: 39 },
     ];
-    const value = pluckWithName(objects);
-    expect(value).toHaveLength(3);
-    expect(value).toContain('b');
+    const result = pluckWithName(objects);
+    expect(result).toHaveLength(3);
+    expect(result).toContain('b');
   });
 });
