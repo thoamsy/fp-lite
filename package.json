@@ -1,4 +1,13 @@
 {
+  "name": "fp-lite",
+  "version": "0.0.1",
+  "license": "MIT",
+  "keywords": [
+    "functional",
+    "JavaScript",
+    "JS",
+    "curry"
+  ],
   "devDependencies": {
     "babel": "^6.23.0",
     "babel-preset-env": "^1.7.0",
