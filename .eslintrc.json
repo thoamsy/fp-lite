@@ -7,6 +7,8 @@
   "rules": {
     "no-empty-function": 2,
     "max-len": [2, 100],
-    "indent": [2, 2]
+    "indent": [2, 2],
+    "no-confusing-arrow": 0,
+    "implicit-arrow-linebreak": 0
   }
 }

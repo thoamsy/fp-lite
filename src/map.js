@@ -8,8 +8,6 @@ function _map(fn, arr, res) {
 }
 /* eslint-enable */
 
-function map(fn, arr) {
-  return reduce((res, cur) => res.concat(fn(cur)), [], arr);
-}
+const map = (fn, arr) => reduce((res, cur) => res.concat(fn(cur)), [], arr);
 
 export default curry(map);

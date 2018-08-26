@@ -1,7 +1,7 @@
 import partial from './partial';
 
-export default function curry(fn, arity = fn.length) {
+export default function curry(fn, length = fn.length) {
   return function curried(...args) {
-    return args.length >= arity ? fn(...args) : partial(curried, ...args);
+    return args.length >= length ? fn(...args) : partial(curried, ...args);
   };
 }

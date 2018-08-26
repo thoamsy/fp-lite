@@ -1,3 +1,4 @@
-export default function flatten(array = [], result = []) {
-  return array.length ? flatten(array.slice(1), result.concat(array[0])) : result;
-}
+const flatten = (array = [], result = []) =>
+  array.length ? flatten(array.slice(1), result.concat(array[0])) : result;
+
+export default flatten;
