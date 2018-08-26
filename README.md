@@ -18,8 +18,12 @@ add10(20); // 30
 ```
 
 ## TODO
+- [ ] 补全一些基本函数. `filter, prop` 这些
 
-[ ]: 补全一些基本函数. `filter, prop` 这些
-[ ]: publish 一个 npm 包
-[ ]: 补全 `curry` 和 `partial` 相关说明
-[ ]: Monad 的封装
+- [ ] 补全 `curry` 和 `partial` 相关说明
+
+- [ ] publish 一个 npm 包
+
+- [ ] 更多 list 通用函数
+
+- [ ] Monad 的封装
