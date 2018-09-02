@@ -15,11 +15,16 @@ describe('The prop function should powerful like the lodash', () => {
           is: 'you',
           not: 'him',
         },
+        skr: [1, 2, 3],
       },
     };
 
     expect(prop(path, obj)).toBe('I');
     expect(prop(['you', 'name', 'not'], obj)).not.toBe('you');
     expect(prop(['you', 'name', 'is'], obj)).toBe('you');
+    expect(prop('you.name.is', obj)).toBe('you');
+    expect(prop('you.skr[0]', obj)).toBe(1);
+    expect(prop('you.skr[1]', obj)).toBe(2);
+    expect(prop('you.skr.1', obj)).toBe(2);
   });
 });
