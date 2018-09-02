@@ -8,6 +8,7 @@ export { default as map } from './map';
 export * from './math';
 export { default as partial } from './partial';
 export { default as partialRight } from './partialRight';
+export { default as pipe } from './pipe';
 export { default as prop } from './prop';
 export { default as reduce } from './reduce';
 export { default as when } from './when';
