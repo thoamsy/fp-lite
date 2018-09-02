@@ -18,7 +18,7 @@ add10(20); // 30
 ```
 
 ## TODO
-- [ ] 补全一些基本函数. `filter, prop` 这些
+- [x] 补全一些基本函数. `filter, prop` 这些
 
 - [ ] 补全 `curry` 和 `partial` 相关说明
 
