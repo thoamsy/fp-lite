@@ -1,3 +1,5 @@
+import curry from './curry';
+
 const unfold = (fn, seed, result = []) => {
   const value = fn(seed);
   if (value === false) {
@@ -8,4 +10,4 @@ const unfold = (fn, seed, result = []) => {
   return unfold(fn, nextSeed, result.concat([nextIter]));
 };
 
-export default unfold;
+export default curry(unfold, 2);
