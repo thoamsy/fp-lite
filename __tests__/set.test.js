@@ -1,7 +1,7 @@
 import { set } from '../src';
 
 describe('test', () => {
-  test('should looks good', () => {
+  test('should looks good with string path', () => {
     const obj = {
       a: {
         b: {
@@ -16,6 +16,8 @@ describe('test', () => {
     set('a.b.c.e', 4, obj);
     expect(obj).toEqual({ a: { b: { c: { d: 2, e: 4 } } } });
     set('a.foo', [1, 2, 3], obj);
-    expect(obj).toEqual({ a: { b: { c: { d: 2, e: 4 } } }, foo: [1, 2, 3] });
+    expect(obj).toEqual({ a: { b: { c: { d: 2, e: 4 } }, foo: [1, 2, 3] } });
+    set('b.c', 6, obj);
+    expect(obj).toEqual({ a: { b: { c: { d: 2, e: 4 } }, foo: [1, 2, 3] }, b: { c: 6 } });
   });
 });

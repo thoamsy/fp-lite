@@ -1,15 +1,15 @@
-import reduce from './reduce';
-
 const set = (path, value, object) => {
-  if (Array.isArray(path)) {
-    const final = reduce((val, key) => val[key], object, path.slice(0, -1));
-    console.log(final, path.slice(0, -1));
-    final[path.slice(-1)[0]] = value;
-  }
   if (typeof path === 'string') {
     return set(path.split(/\.|\[|\]/g).filter(Boolean), value, object);
   }
-  return object;
+  const [p, ...rest] = path;
+  const res = object;
+  if (rest.length) {
+    res[p] = res[p] || {};
+    return set(rest, value, res[p]);
+  }
+  res[p] = value;
+  return res;
 };
 
 export default set;
