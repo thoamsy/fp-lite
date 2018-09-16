@@ -1,3 +1,5 @@
+import curry from './curry';
+
 const set = (path, value, object) => {
   if (typeof path === 'string') {
     return set(path.split(/\.|\[|\]/g).filter(Boolean), value, object);
@@ -12,4 +14,4 @@ const set = (path, value, object) => {
   return res;
 };
 
-export default set;
+export default curry(set);
