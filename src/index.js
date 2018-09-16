@@ -13,3 +13,4 @@ export { default as prop } from './prop';
 export { default as reduce } from './reduce';
 export { default as when } from './when';
 export { default as set } from './set';
+export { default as zip } from './zip';
