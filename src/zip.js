@@ -1,7 +1,12 @@
 import curry from './curry';
 
-const zip = (list1, list2) => {
-  const length = Math.min(list1.length, list2.length);
+const zip = (list1 = [], list2 = []) => {
+  let length = 0;
+  try {
+    length = Math.min(list1.length, list2.length);
+  } catch (err) {
+    throw TypeError('You should sure the argument are both list');
+  }
   if (Number.isNaN(length)) {
     throw TypeError('You should sure the argument are both list');
   }
